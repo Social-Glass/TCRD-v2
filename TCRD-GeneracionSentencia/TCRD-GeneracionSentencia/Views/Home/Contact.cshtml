@@ -1,0 +1,115 @@
+﻿
+<style>
+    #payment-button {
+        color: #fff;
+        background-color: #79222d;
+        border-color: #79222e;
+    }
+
+        #payment-button:hover {
+            color: #fff;
+            background-color: #993442;
+            border-color: #993442;
+        }
+</style>
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet">
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Creacion de la Sentencia</div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center title-2">Datos</h3>
+                    </div>
+                    <hr>
+                    <form action="" method="post" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-num_exp" class="control-label mb-1">Num del Expediente</label>
+                                    <input id="num_exp" name="num_exp" type="text" class="form-control num_exp" value="" data-val="true" data-val-required="Introduce el Num del Expediente"
+                                           data-val-num_expp="Introduce el Num del Expediente" placeholder="TC-XX-XXXX-XXXX"
+                                           autocomplete="num_exp">
+                                    <span class="help-block" data-valmsg-for="num_exp" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="fecha_exp" class="control-label mb-1">Fecha de la Sentencia</label>
+                                <div class="input-group date">
+                                    <input id="fecha_exp" name="fecha_exp" type="text" class="form-control fecha_exp" value="" data-val="true" data-val-required="Introduce la Fecha"
+                                           data-val-fecha_exp="Introduce la Fecha" autocomplete="off">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="desc_exp" class="control-label mb-1">Descripcion de la Sentencia</label>
+                            <textarea id="desc_exp" name="desc_exp-input" rows="6" placeholder="" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="archivo" class="control-label mb-1">Adjuntar archivo</label>
+                            <input type="file" id="archivo" name="archivo" accept=".doc,.docx" class="form-control">
+
+                        </div>
+                        <div>
+                            <button id="generar-sentencia" type="submit" class="btn btn-lg btn-info btn-block">
+                                <i class="fa fa-save fa-lg"></i>&nbsp;
+                                <span id="payment-button-info">Generar Documento</span>
+                                <span id="payment-button-info2" style="display:none;">Generando…</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe id="pdfViewer" style="width: 100%; height: 800px;"></iframe>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+
+    $(document).ready(function () {
+
+
+        $("#generar-sentencia").click(function (e) {
+            e.preventDefault();
+
+            var numExp = $("#num_exp").val();
+            var fechaExp = $("#fecha_exp").val();
+            var descExp = $("#desc_exp").val();
+
+            var archivo = $("#archivo")[0].files[0];
+
+            var formData = new FormData();
+            formData.append("archivo", archivo);
+            formData.append("num_sentencia", numExp);
+            formData.append("fecha_sentencia", fechaExp);
+            formData.append("descripcion", descExp);
+            $.ajax({
+                type: "POST",
+                url: "GenerarSentencia",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.success === true) {
+                        var pdfUrl = "data:application/pdf;base64," + response.pdfBase64;
+                        document.getElementById("pdfViewer").src = pdfUrl;
+                    } else {
+                        console.log("No se pudo generar el PDF.");
+                    }
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+    });
+</script>

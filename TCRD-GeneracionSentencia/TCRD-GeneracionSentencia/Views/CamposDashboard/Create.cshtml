@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<style>
+
+    #guardar-campo {
+        color: #fff;
+        background-color: #79222d !important;
+        border-color: #79222e !important;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Crear un Magistrado</div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center title-2">Datos</h3>
+                    </div>
+                    <hr>
+                    <form action="" method="post" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-nom_magistrado" class="control-label mb-1">Nombre del Campo</label>
+                                    <input id="campo" name="nom_magistrado" type="text" class="form-control " value="" data-val="true" data-val-required="Introduzca el nombre del Magistrado"
+                                           data-val-num_expp="Introduce el nombre del campo" placeholder="Introduzca el nombre del campo"
+                                           autocomplete="campo">
+                                    <span class="help-block" data-valmsg-for="campo" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="fecha_exp" class="control-label mb-1">Estatus</label>
+                                <div class="input-group date">
+                                    <select id="estatus" name="estatus" class="form-control" >
+                                        <option selected value="1">Activo</option>
+                                        <option value="2">Inactivo</option>
+                                    </select>
+                                           
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button id="guardar-campo" type="submit" class="btn btn-md btn-info btn-block">
+                                <i class="fa fa-save fa-lg"></i>&nbsp;
+                                <span id="payment-button-info">Guardar Campo</span>
+                                <span id="payment-button-info2" style="display:none;">Guardando…</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="~/Content/vendor/jquery-3.2.1.min.js"></script>
+<script>
+    var id = 0;
+
+    $(document).ready(function () {
+
+
+        $("#guardar-campo").click(function (e) {
+            e.preventDefault();
+
+            var campo = $("#campo").val();
+            var estatus = $('#estatus').val();
+            alert(estatus);
+
+            var formData = new FormData();
+            formData.append("Nombre", campo);
+            formData.append("ID_Estatus", estatus);
+            $.ajax({
+                type: "POST",
+                url: "Create",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.success === true) {
+                        window.location.reload();
+                        alert("Accion Realizada Correctamente");
+
+                    } else {
+                        console.log("No se pudo registrar el Magistrado");
+                    }
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+
+    });
+
+</script>

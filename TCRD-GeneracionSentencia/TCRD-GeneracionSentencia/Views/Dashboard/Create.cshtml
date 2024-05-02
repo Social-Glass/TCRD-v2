@@ -1,0 +1,141 @@
+﻿@{
+    
+}
+
+<style>
+    #guardar-datos {
+        color: #fff;
+        background-color: #79222d !important;
+        border-color: #79222e !important;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Actualizacion del Dashboard</div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center title-2">Datos</h3>
+                    </div>
+                    <hr>
+                    <form action="" method="post" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-num_exp" class="control-label mb-1">Expedientes Recibidos</label>
+                                    <input id="exp_recibidos" name="exp_recibidos" type="number" class="form-control exp_recibidos" value="" data-val="true" data-val-required=""
+                                           placeholder=""
+                                           autocomplete="exp_recibidos">
+                                    <span class="help-block" data-valmsg-for="num_exp" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="fecha_exp" class="control-label mb-1">Expedientes en Proceso</label>
+                                <div class="input-group date">
+                                    <input id="exp_proceso" name="exp_proceso" type="number" class="form-control exp_proceso" value="" data-val="true" data-val-required="Introduce la Fecha"
+                                           data-val-fecha_exp="Introduce la Fecha" autocomplete="off">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-num_exp" class="control-label mb-1">Expedientes despachados</label>
+                                    <input id="exp_despachados" name="exp_despachados" type="number" class="form-control exp_despachados" value="" data-val="true" data-val-required="Introduce el Num del Expediente"
+                                           data-val-num_expp="Introduce el Núm del Expediente" placeholder=""
+                                           autocomplete="num_exp">
+                                    <span class="help-block" data-valmsg-for="num_exp" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="fecha_exp" class="control-label mb-1">Sentencias Generadas</label>
+                                <div class="input-group date">
+                                    <input id="sen_generadas" name="sen_generadas" type="number" class="form-control sen_generadas" value="" data-val="true" data-val-required="Introduce la Fecha"
+                                           data-val-fecha_exp="Introduce la Fecha" autocomplete="off">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-num_exp" class="control-label mb-1">Sentencias Publicadas</label>
+                                    <input id="sen_publicadas" name="sen_publicadas" type="number" class="form-control sen_publicadas" value="" data-val="true" data-val-required="Introduce el Num del Expediente"
+                                           data-val-num_expp="Introduce el Núm del Expediente" placeholder=""
+                                           autocomplete="num_exp">
+                                    <span class="help-block" data-valmsg-for="num_exp" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-num_exp" class="control-label mb-1"></label>
+                                    <button id="guardar-datos" type="submit" class="btn btn-md btn-info btn-block">
+                                        <i class="fa fa-save fa-lg"></i>&nbsp;
+                                        <span id="payment-button-info">Guardar Datos</span>
+                                        <span id="payment-button-info2" style="display:none;">Generando…</span>
+                                    </button>
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="~/Content/vendor/jquery-3.2.1.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+
+
+        $("#guardar-datos").click(function (e) {
+            e.preventDefault();
+
+            var exp_recibidos = $("#exp_recibidos").val();
+            var exp_proceso = $("#exp_proceso").val();
+            var exp_despachados = $("#exp_despachados").val();
+            var sen_generadas = $("#sen_generadas").val();
+            var sen_publicadas = $("#sen_publicadas").val();
+
+
+            var formData = new FormData();
+            formData.append("exp_recibidos", exp_recibidos);
+            formData.append("exp_proceso", exp_proceso);
+            formData.append("exp_despachados", exp_despachados);
+            formData.append("sen_generadas", sen_generadas);
+            formData.append("sen_publicadas", sen_publicadas);
+            $.ajax({
+                type: "POST",
+                url: "InsertarDatos",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.success === true) {
+                        window.location.reload();
+                        console.log("Se actualizaron los datos")
+
+                    } else {
+                        console.log("No se pudieron actualizar los datos");
+                    }
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+
+    });
+
+</script>

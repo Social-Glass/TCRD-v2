@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Registros";
+}
+
+
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- USER DATA-->
+            <div class="user-data m-b-30">
+                <h3 class="title-3 m-b-30">
+                    <i class="zmdi zmdi-account-calendar"></i>Registros
+                </h3>
+                <div class="table-responsive table-data">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Nombre</th>
+                                <th>Valor</th>
+                                <th>Usuario</th>
+                                <th>Fecha Creacion</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        <label class="au-checkbox">
+                                            <input type="checkbox">
+                                            <span class="au-checkmark"></span>
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <div class="table-data__info">
+                                            <h6>@item.Campo</h6>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="table-data__info">@item.Valor</span>
+                                    </td>
+                                    <td>
+                                        <span class="table-data__info">@item.Usuario</span>
+                                    </td>
+                                    <td>
+                                        <span class="table-data__info">@item.fecha_registro</span>
+                                    </td>
+                                    <td>
+                                        <!-- Botones de acción, si es necesario -->
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+</div>
+
+</div>

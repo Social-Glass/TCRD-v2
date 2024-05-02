@@ -1,0 +1,117 @@
+﻿
+@using TCRD_GeneracionSentencia.Models
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+
+    .btn-info {
+        color: #fff;
+        background-color: rgb(122, 34, 46);
+        border-color: rgb(122, 34, 46);
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Secuencia</div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Secuencia", "Sentencias", FormMethod.Post, new { @class = "au-form au-form--border" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <form>
+                            <div class="row">
+                                <div class="col-9">
+                                    <div class="form-group">
+                                        <label for="secuencia" class="control-label mb-1">Nueva Secuencia</label>
+                                        <input id="secuencia" name="secuencia" type="text" class="form-control secuencia" value="" data-val="true" data-val-required="Introduce la Secuencia"
+                                               data-val-num_expp="Introduzca la nueva secuencia" placeholder="TC/XXXX/XX"
+                                               autocomplete="num_exp">
+                                        <span class="help-block" data-valmsg-for="secuencia" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-group">
+                                        <label for="cc-num_exp" class="control-label mb-1"></label>
+                                        <button id="generar-sentencia" type="submit" class="btn btn-md btn-info btn-block">
+                                            <i class="fa fa-save fa-lg"></i>&nbsp;
+                                            <span id="payment-button-info">Establecer Secuencia</span>
+                                            <span id="payment-button-info2" style="display:none;">Generando…</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    }
+                 </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- USER DATA-->
+            <div class="user-data m-b-30">
+                <h3 class="title-3 m-b-30">
+                    <i class="zmdi zmdi-account-calendar"></i>Secuencias Generadas
+                </h3>
+                <div class="table-responsive table-data">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>Num de la secuencia</td>
+                                <td>Fecha</td>
+                                <td>Usuario</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @{
+
+                                foreach (var item in Model)
+                                {
+                                                        <tr>
+                                                            <td>
+                                                                <label class="au-checkbox">
+                                                                    <input type="checkbox">
+                                                                    <span class="au-checkmark"></span>
+                                                                </label>
+                                                            </td>
+                                                            <td>
+                                                                <div class="table-data__info">
+                                                                    <h6>@item.secuencia</h6>
+
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <span class="table-data__info">@item.fecha</span>
+                                                            </td>
+                                                            <td class="table-data__info">
+                                                               @item.usuario
+                                                            </td>
+                                                            <td>
+                                                                <span class="more">
+                                                                    <i class="zmdi zmdi-more"></i>
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                }
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END USER DATA-->
+        </div>
+    </div>
+</div>

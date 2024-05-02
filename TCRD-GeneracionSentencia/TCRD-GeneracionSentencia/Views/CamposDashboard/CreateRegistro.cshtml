@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewBag.Title = "Create Registro";
+}
+
+<style>
+    #guardar-registro {
+        color: #fff;
+        background-color: #79222d !important;
+        border-color: #79222e !important;
+    }
+</style>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Crear un Registro</div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center title-2">Datos del Registro</h3>
+                    </div>
+                    <hr>
+                    <form id="form-registros" novalidate="novalidate">
+                        @foreach (var item in Model)
+                        {
+                            <div class="form-group">
+                                <label for="@item.Nombre" class="control-label mb-1">@item.Nombre</label>
+                                <input id="@item.ID" name="@item.ID" type="text" class="form-control" placeholder="@item.Nombre" value="">
+                            </div>
+                        }
+                        <div>
+                            <button id="guardar-registro" type="button" class="btn btn-md btn-info btn-block">
+                                <i class="fa fa-save fa-lg"></i>&nbsp;
+                                <span id="payment-button-info">Guardar Registro</span>
+                                <span id="payment-button-info2" style="display:none;">Guardando…</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var modelData = @Html.Raw(Json.Encode(Model));
+
+    $(document).ready(function () {
+        $("#guardar-registro").click(function () {
+            var valores = ObtenerValoresDeCampos();
+            console.log(valores);
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("CreateRegistro", "CamposDashboard")',
+                data: JSON.stringify(valores),
+                contentType: "application/json; charset=utf-8",
+                processData: false,
+                success: function (response) {
+                    if (response === true) {
+                        window.location.reload();
+                        alert("Registros creados exitosamente");
+                    } else {
+                        alert("No se pudieron crear los registros");
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+
+        function ObtenerValoresDeCampos() {
+            var valores = [];
+
+            for (var i = 0; i < modelData.length; i++) {
+                var idCampo = modelData[i].ID;
+                var valor = $("#" + idCampo).val();
+
+                valores.push({ IdCampo: idCampo, Valor: valor });
+            }
+
+            return valores;
+        }
+    });
+</script>
+   

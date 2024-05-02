@@ -1,0 +1,343 @@
+﻿
+<style>
+        #generar-sentencia {
+            color: #fff;
+            background-color: #79222d !important;
+            border-color: #79222e !important;
+        }
+
+        #generar-sentencia:hover {
+            color: #fff;
+            background-color: #993442;
+            border-color: #993442;
+        }
+
+        #descargar-documento{
+           color: #fff; 
+           background-color: #79222d !important; 
+           border-color: #79222e !important;
+        }
+
+        #generar-tweet {
+            color: #fff;
+            background-color: #79222d !important;
+            border-color: #79222e !important;
+        }
+
+        #generar-tweet:hover {
+            color: #fff;
+            background-color: #993442;
+            border-color: #993442;
+        }
+
+
+        .tweet-container {
+            background: #fdfdfd;
+            padding: 1rem;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+            display: none;
+            gap: .75em;
+            border: 1px solid #8ab5;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .tweet-container.open {
+            display: grid;
+        }
+
+        .tweet-container h2 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
+            letter-spacing: .25px;
+        }
+
+        .h3_tweet {
+            font-size: 14px;
+            color: #8ab;
+            font-weight: 300;
+        }
+
+        .p_tweet {
+            font-size: 16px;
+            color: #222;
+        }
+
+        .post-infos p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .date {
+            color: #111;
+            font-weight: 600;
+        }
+
+        .a_tweet {
+            font-weight: 600;
+            color: #4ad;
+        }
+
+        .a_tweet:hover {
+            color: #47c;
+        }
+
+        .header, .userinfos, .post-infos {
+            display: flex;
+        }
+
+        .header, .post-infos {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .userinfos {
+            flex-grow: 2;
+            align-items: center;
+        }
+
+        figure {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #5af;
+            border-radius: 50%;
+            margin-right: .5rem;
+        }
+
+        .bi {
+            transition: all.3s ease-in-out;
+        }
+
+        .bi-x {
+            transform: scale(2);
+        }
+
+        .bi-x:hover {
+            color: red;
+            transform: scale(2.4);
+        }
+
+        .bi-hand-thumbs-up-fill {
+            transform: scale(1.5);
+        }
+
+        .bi-hand-thumbs-up-fill:hover {
+            transform: scale(1.75) rotate(-30deg);
+        }
+
+        .bi-hand-thumbs-up-fill.liked {
+            color: #5af;
+        }
+
+        .hr_tweet {
+            border: 1px solid #8ab;
+            border-radius: 10px;
+        }
+    
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">Creación de la Sentencia</div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h3 class="text-center title-2">Datos</h3>
+                    </div>
+                    <hr>
+                    <form action="" method="post" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="cc-num_exp" class="control-label mb-1">Núm del Expediente</label>
+                                    <input id="num_exp" name="num_exp" type="text" class="form-control num_exp" value="" data-val="true" data-val-required="Introduce el Num del Expediente"
+                                           data-val-num_expp="Introduce el Núm del Expediente" placeholder="TC-XX-XXXX-XXXX"
+                                           autocomplete="num_exp">
+                                    <span class="help-block" data-valmsg-for="num_exp" data-valmsg-replace="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="fecha_exp" class="control-label mb-1">Fecha de la Sentencia</label>
+                                <div class="input-group date">
+                                    <input id="fecha_exp" name="fecha_exp" type="text" class="form-control fecha_exp" value="@DateTime.Now" data-val="true" data-val-required="Introduce la Fecha"
+                                           data-val-fecha_exp="Introduce la Fecha" autocomplete="off">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="archivo" class="control-label mb-1">Adjuntar archivo</label>
+                            <input type="file" id="archivo" name="archivo" accept=".doc,.docx" class="form-control">
+
+                        </div>
+                        
+                        <div class="row" >
+                            <div class="col-4">
+                                <button id="generar-sentencia" type="submit" class="btn btn-md btn-info btn-block">
+                                    <i class="fa fa-save fa-lg"></i>&nbsp;
+                                    <span id="payment-button-info">Generar Documento</span>
+                                    <span id="payment-button-info2" style="display:none;">Generando…</span>
+                                </button>
+                            </div>
+                            <div class="col-4">
+                                <button id="generar-tweet" type="button" class="btn btn-md btn-info btn-block" hidden>
+                                    <i class="fa fa-commenting fa-lg"></i>&nbsp;
+                                    <span id="payment-button-info">Generar Tweet</span>
+                                    <span id="payment-button-info2" style="display:none;">Generando…</span>
+                                </button>
+                            </div>
+                            <div id="boton-container" class="col-4">
+
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="container-tweet" class="tweet-container open" hidden>
+        <div class="header">
+
+            <div class="userinfos">
+                <figure><img src="https://ojd.org.do/wp-content/uploads/2020/04/Tribunal-Constitucional-Logo.png" /></figure>
+                <div class="name-username">
+                    <h2>TCRD</h2>
+                    <h3 class="h3_tweet">&#64TribunalConstRD</h3>
+                </div>
+            </div>
+            <i class="bi bi-x"></i>
+        </div>
+        <div class="textarea" style="margin-bottom: 10px;">
+            <p class="p_tweet" id="contenido_tweet"> </p>
+            <br>
+            <p class="p_tweet"><a class="a_tweet" href="https://www.tribunalconstitucional.gob.do/consultas/secretaría/sentencias/" target="_blank">https://www.tribunalconstitucional.gob.do/</a> </p>
+        </div>
+        <hr class="hr_tweet">
+        <div class="post-infos">
+            <p class="p_tweet">Posted: <span class="date">@DateTime.Now </span></p>
+            <p class="p_tweet"><span class="likes-number"></span><i class="bi bi-hand-thumbs-up-fill like-btn"></i></p>
+        </div>
+    </div>
+
+    <iframe id="pdfViewer" style="width: 100%; height: 800px;" hidden></iframe>
+</div>
+
+
+<script src="~/Content/vendor/jquery-3.2.1.min.js"></script>
+<script>
+
+
+    $(document).ready(function () {
+
+        var resumen_tweet = "";
+
+        $("#generar-sentencia").click(function (e) {
+            e.preventDefault();
+
+            var numExp = $("#num_exp").val();
+            var fechaExp = $("#fecha_exp").val();
+            var descExp = $("#desc_exp").val();
+
+            var archivo = $("#archivo")[0].files[0];
+
+            var formData = new FormData();
+            formData.append("archivo", archivo);
+            formData.append("num_expediente", numExp);
+            formData.append("fecha_sentencia", fechaExp);
+            formData.append("descripcion", descExp);
+            $.ajax({
+                type: "POST",
+                url: "GenerarSentencia",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    if (response.success === true) {
+                        var pdfUrl = "data:application/pdf;base64," + response.pdfBase64;
+                        document.getElementById("pdfViewer").src = pdfUrl;
+                        document.getElementById("pdfViewer").removeAttribute("hidden");
+                        document.getElementById("generar-tweet").removeAttribute("hidden");
+
+                        var downloadButton = document.createElement('a');
+                        downloadButton.href = "data:application/octet-stream;base64," + response.fileBase64;
+                        downloadButton.download = numExp+".docx"; 
+
+                        downloadButton.innerHTML = `<button id="descargar-documento" type="button" class="btn btn-md btn-info btn-block">
+                            <i class="fa fa-download fa-lg"></i>&nbsp;
+                            <span id="payment-button-info">Descargar Documento</span>
+                            <span id="payment-button-info2" style="display:none;">Descargando…</span>
+                        </button>`;
+
+                       
+                        var botonContainer = document.getElementById("boton-container");
+                        botonContainer.appendChild(downloadButton);
+                        
+                        downloadButton.addEventListener('click', function () {
+                            window.open(downloadButton.href, '_blank');
+                        });
+
+                        resumen_tweet = response.resumen;
+
+                    } else {
+                        console.log("No se pudo generar el PDF.");
+                    }
+                },
+
+                error: function (xhr, status, error) {
+                    console.log(error);
+                }
+            });
+        });
+
+        $("#generar-tweet").click(function () {
+            var apiKey = "yourApiKey";
+
+            var requestBody = {
+                "model": "gpt-3.5-turbo",
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "Resume el contenido en 150 caracteres"
+                    },
+                    {
+                        "role": "user",
+                        "content": resumen_tweet
+                    }
+                ],
+                "temperature": 0,
+                "max_tokens": 1024
+            };
+
+            $.ajax({
+                type: "POST",
+                url: "https://api.openai.com/v1/chat/completions",
+                headers: {
+                    "Authorization": "Bearer " + apiKey,
+                    "Content-Type": "application/json"
+                },
+                data: JSON.stringify(requestBody),
+                dataType: "json",
+                success: function (response) {
+                    var summary = response.choices[0].message.content;
+                    $("#contenido_tweet").text(summary);
+                    document.getElementById("container-tweet").removeAttribute("hidden");
+
+                },
+                error: function () {
+                    $("#summaryResult").text("Error al obtener el resumen.");
+                }
+            });
+        });
+
+    });
+</script>

@@ -1,0 +1,30 @@
+# Carpeta binaria y de objetos generada durante la compilación
+bin/
+obj/
+
+# Carpeta de paquetes NuGet
+packages/
+
+# Configuraciones específicas de Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos específicos de usuario de Visual Studio Code
+.vscode/
+
+# Archivo de configuración de la aplicación web (si aplicable)
+Web.config
+
+# Carpeta de datos de la aplicación (si aplicable)
+App_Data/
+
+# Archivos de respaldo y caché generados por el sistema
+*.log
+*.cache
+
+# Archivos de configuración específicos del usuario de proyectos y soluciones
+*.csproj.user
+*.sln.user
