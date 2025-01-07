@@ -19,6 +19,14 @@ Otro objetivo clave es fomentar la adopción de estándares abiertos en todas la
 En una era marcada por la rapidez y la innovación tecnológica, el Tribunal Constitucional de la República Dominicana ha tomado la decisiva medida de adaptarse y modernizarse. En una colaboración estratégica con Paola Santana, líder en soluciones tecnológicas, han lanzado un conjunto de proyectos que buscan revolucionar la justicia constitucional, utilizando la tecnología para hacerla más eficiente, transparente y accesible. Estas iniciativas, que abarcan desde la automatización de tareas hasta el uso de inteligencia artificial, reflejan el compromiso del Tribunal Constitucional de estar a la vanguardia y de ofrecer a los ciudadanos un servicio judicial de primer nivel.
 
 A continuación, se presentan los proyectos clave que se llevaron a cabo en esta colaboración:
+## Mejoras a buscadores del portal institucional
+### Buscador General
+
+1. Se llevaron a cabo una serie de ajustes y mejoras significativas en nuestro motores de búsqueda general y de sentencias, con el objetivo de potenciar su rendimiento. Estas actualizaciones se centraron en dos aspectos clave: velocidad y optimización. En cuanto a la velocidad, se mejoro el algoritmo de búsqueda para reducir significativamente el tiempo de respuesta y proporcionar resultados más rápidos a los usuarios y mejorando la precisión y relevancia de los resultados obtenidos.
+
+2. Se agruparon los resultados de búsqueda por categoría de manera organizada para que muestre las categorías agrupadas.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736280813/iqtlkliqumzhror2ikdx.png)
 
 ## Síntesis Autónoma: Agilizando la Redacción de Sentencias mediante IA en el Tribunal Constitucional
 
