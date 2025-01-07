@@ -156,13 +156,21 @@ Puedes descargar e importar el .bpz que replicara todo el chatbot en tu cuenta d
 
 ### Integración de categorización de sentencias en el software y bases de datos de jurisprudencia
 
-Se aplicó un sistema de categorización basado en los boletines anualmente emitidos por la Secretaria General del Tribunal Constitucional de la República Dominicana. Se extrajeron las informaciones necesarias de estos boletines para la creación de etiquetas que luego fueron implementadas para categorizar cada sentencia con su debido tema y subtema. **El proceso para esto fue el siguiente:**  
+Se aplicó un sistema de categorización basado en los boletines anualmente emitidos por la Secretaria General del Tribunal Constitucional de la República Dominicana. Se extrajeron las informaciones necesarias de estos boletines para la creación de etiquetas que luego fueron implementadas para categorizar cada sentencia con su debido tema y subtema.
 
 **Extracción de temas y  subtemas:** La implementación del proceso de extracción de temas y subtemas está desarrollado en Python v3.11.4 utilizando las librerías de Pandas y PyPDF2. 
 
 A continuación se muestra un extracto del código implementado. 
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272227/lml5eczpnqzhd7qjvr0c.png) 
+
+**Procesamiento y limpieza de datos:** La implementación del proceso de procesamiento y limpieza de datos se hace utilizando OpenRefine, aplicando un conjunto de operaciones a los resultados extraídos.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/hvj0lzol4f72mm1vrzzk.png) 
+
+**Carga de los resultados:** Desde OpenRefine es posible exportar los resultados a cargar con la estructura deseada. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/skxn7hqg4z5gckmbal21.png) 
 
 ## Habilitación de pestaña LAB con documentación de innovaciones  
 
