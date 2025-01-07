@@ -152,7 +152,17 @@ Puedes descargar e importar el .bpz que replicara todo el chatbot en tu cuenta d
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736270386/wzikee4oyz2wk5mpndaj.png)
 
+## Mejoras al software y bases de datos de jurisprudencia
 
+### Integración de categorización de sentencias en el software y bases de datos de jurisprudencia
+
+Se aplicó un sistema de categorización basado en los boletines anualmente emitidos por la Secretaria General del Tribunal Constitucional de la República Dominicana. Se extrajeron las informaciones necesarias de estos boletines para la creación de etiquetas que luego fueron implementadas para categorizar cada sentencia con su debido tema y subtema. **El proceso para esto fue el siguiente:**  
+
+**Extracción de temas y  subtemas:** La implementación del proceso de extracción de temas y subtemas está desarrollado en Python v3.11.4 utilizando las librerías de Pandas y PyPDF2. 
+
+A continuación se muestra un extracto del código implementado. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272227/lml5eczpnqzhd7qjvr0c.png) 
 
 ## Habilitación de pestaña LAB con documentación de innovaciones  
 
