@@ -147,7 +147,7 @@ Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder 
 En un esfuerzo por mejorar la transparencia y la comunicación con los usuarios externos, hemos creado una nueva pestaña dentro de la página web del Tribunal Constitucional que refleja todos los cambios, actualizaciones y mejoras realizadas en el sitio. Esta pestaña en lab.tc.gob.do, proporciona a los usuarios una visión detallada de las modificaciones implementadas, permitiéndoles comprender cómo estos cambios impactan en su experiencia al interactuar con el portal institucional.
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/mxjagyqs4frweirb4lt5.png)
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/hcyl3sgt5bafjsiqpq3v.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/t_version2/hcyl3sgt5bafjsiqpq3v.png)
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/gde5vhqdvhq95dcltfez.png)
 
 
