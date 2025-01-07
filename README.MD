@@ -28,6 +28,42 @@ A continuación, se presentan los proyectos clave que se llevaron a cabo en esta
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736280813/iqtlkliqumzhror2ikdx.png)
 
+3. Se seccionaron los resultados por categorías de manera en que el usuario puede filtrar de una manera más sencilla la categoría a la cual va relacionada su búsqueda. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736280814/bibyhhgnmvuyahpqciyh.png)
+
+4. Para mejorar la experiencia del usuario, incluimos la opción para que el usuario pueda buscar por “frases exactas” sin la necesidad de agregar comillas dobles. Por otro lado, sí quiere realizar una búsqueda normal, la selección de “todas estas palabras” está automáticamente seleccionada. 
+
+5. Si el usuario desea utilizar las comillas, al efectuarse la búsqueda automáticamente se seleccionará “frases exactas” y se removerán las comillas de la búsqueda. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736280814/i2vtlqlussirwznqmn2v.png)
+
+6. Se destacó el siguiente párrafo mostrado antes de realizar una búsqueda para que el lector pueda prestarle más atención y tenga oportunidad de poder leer en detalle. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736280814/wacypq3wqmmuouyxasni.png)
+
+###Buscador de Sentencias
+
+1. Se aplicaron los mismos cambios realizados a la búsqueda general como base para mejorar la experiencia de usuario al buscar las sentencias. 
+
+2. Se ha introducido un filtro principal adicional denominado "Temas". Este filtro clasifica las sentencias según los distintos temas presentes en los boletines emitidos por el Departamento de Secretaría del Tribunal Constitucional. Esta función facilita la búsqueda de sentencias relacionadas con temas específicos, permitiendo a los usuarios encontrar múltiples sentencias sobre un tema determinado de manera más eficiente.
+
+**Búsqueda Avanzada:** Se añadió un renglón de búsqueda avanzada, para poder proveer al usuario la oportunidad de combinar una serie de filtros para optimizar su búsqueda. 
+
+Dentro de esta búsqueda avanzada, se disponen diversas barras de búsqueda, cada una con una función específica que, en conjunto, proporcionan resultados más precisos y adecuados.
+
+A continuación se describe cada una ellas: 
+
+**Todas estas palabras:** Al utilizar este operador, puedes incluir varias palabras clave separadas por espacios. El motor de búsqueda mostrará resultados que contengan todas las palabras clave especificadas en la misma sentencia. Por ejemplo, si buscas "Legitimación activa", obtendrás resultados que contengan tanto "Legitimación" como "activa". 
+
+**Frase Exacta:** Al utilizar este operador, colocas una frase en tu búsqueda. Esto indica al motor de búsqueda que solo quieres resultados que coincidan exactamente con la frase que has especificado. Por ejemplo, si buscas "Acción directa de inconstitucionalidad", sólo se mostrarán los resultados que contengan esa frase exacta en ese orden específico. Esto es útil cuando buscas información específica y deseas evitar resultados irrelevantes.
+
+**Cualquiera de estas palabras:** Al utilizar este operador, puedes incluir varias palabras clave separadas por espacios. El motor de búsqueda mostrará resultados que contengan al menos una de las palabras clave especificadas. Por ejemplo, si buscas "Legitimación activa", obtendrás resultados que contengan tanto "Legitimación" y/o "activa". Esto es útil cuando tienes varias palabras clave. 
+
+**Ninguna de estas palabras:** Al utilizar este operador, puedes indicar al motor de búsqueda que excluya ciertas palabras de los resultados. Por ejemplo, si buscas "Tribunal Constitucional", obtendrás resultados que no contengan las palabras "Tribunal", y “ Constitucional”. Esto es útil cuando deseas refinar tu búsqueda y eliminar resultados no deseados.
+
+**Fundamentos del tribunal:** Esta búsqueda permite al usuario buscar en una sentencia después de la sección de consideraciones y fundamentos. Excluyendo la parte inicial de la sentencia. 
+
 ## Síntesis Autónoma: Agilizando la Redacción de Sentencias mediante IA en el Tribunal Constitucional
 
 Se procedió a automatizar el proceso de redacción de sentencias y la creación de resúmenes automáticos, con el objetivo principal de reducir el tiempo necesario para la redacción y, por consiguiente, incrementar la capacidad de emitir un mayor número de sentencias en un periodo determinado.
