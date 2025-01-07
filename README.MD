@@ -42,7 +42,7 @@ A continuación, se presentan los proyectos clave que se llevaron a cabo en esta
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736280814/wacypq3wqmmuouyxasni.png)
 
-###Buscador de Sentencias
+### Buscador de Sentencias
 
 1. Se aplicaron los mismos cambios realizados a la búsqueda general como base para mejorar la experiencia de usuario al buscar las sentencias. 
 
