@@ -140,3 +140,28 @@ Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder 
 ### Diagrama del Flujo
 
 ![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698729056/Screenshot_2023-10-31_at_1.10.30_AM_hty4po.png)
+
+
+## Habilitación de pestaña LAB con documentación de innovaciones  
+
+En un esfuerzo por mejorar la transparencia y la comunicación con los usuarios externos, hemos creado una nueva pestaña dentro de la página web del Tribunal Constitucional que refleja todos los cambios, actualizaciones y mejoras realizadas en el sitio. Esta pestaña en lab.tc.gob.do, proporciona a los usuarios una visión detallada de las modificaciones implementadas, permitiéndoles comprender cómo estos cambios impactan en su experiencia al interactuar con el portal institucional.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/mxjagyqs4frweirb4lt5.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/hcyl3sgt5bafjsiqpq3v.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/gde5vhqdvhq95dcltfez.png)
+
+
+Además de mostrar los cambios, también hemos agregado guías interactivas en los renglones donde se llevaron a cabo las actualizaciones. Estas guías interactivas ofrecen a los usuarios una forma más informativa y práctica de aprender a utilizar las nuevas funcionalidades y mejoras. Al hacer clic en los elementos resaltados, los usuarios recibirán instrucciones claras y ejemplos para aprovechar al máximo las nuevas actualizaciones.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736269024/nytbfhsqpqqgowwor6w5.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736269023/w1b4lfrj8rsmrsbpeadl.png)
+
+
+Es importante recalcar que esta pestaña de cambios en la página web del Tribunal Constitucional estará en constante actualización a medida que sigamos implementando nuevas mejoras y funcionalidades en el portal. Nuestro objetivo es mantener a los usuarios externos informados sobre todas las actualizaciones relevantes y ofrecerles una manera transparente de conocer cómo estas mejoras impactan su experiencia. Con cada nuevo cambio, vendrán nuevas y emocionantes maneras de interactuar con el usuario, mejorando la comunicación y el acceso a la información de una manera más efectiva y enriquecedora. 
+
+Con esta iniciativa, buscamos proporcionar una experiencia más transparente y educativa para los usuarios externos que acceden al sitio web del Tribunal Constitucional. Queremos asegurarnos de que los cambios y mejoras sean comprensibles y accesibles para todos, lo que permitirá una mayor interacción y uso efectivo de los recursos proporcionados en el portal. Esta pestaña y las guías interactivas representan nuestro compromiso continuo de brindar un servicio de calidad
+
+
+
+
+
