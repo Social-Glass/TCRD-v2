@@ -1,0 +1,641 @@
+[
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "311 - Boletín Constitucional Año 2012 - República  - DominicanaINDICE TEMÁTICO - * Los números referidos corresponden a la sentencia * - A ACCESO A LA INFORMACIÓN PÚBLICA"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "A ACCESO A LA INFORMACIÓN PÚBLICA"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "A ACCESO A LA INFORMACIÓN PÚBLICA"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ACCESO A LA INFORMACIÓN PÚBLICA"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "sentences",
+        "expression": "grel:\"TC/\" + \"0000\"[0,4-value.length()] + value + \"/\" + substring(cells[\"year\"].value, 2)",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column sentences using expression grel:\"TC/\" + \"0000\"[0,4-value.length()] + value + \"/\" + substring(cells[\"year\"].value, 2)"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "312  Tribunal Constitucional (incompetencia)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Tribunal Constitucional (incompetencia)"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "591 - Boletín Constitucional Año 2013 - República   - Dominicana  ÍNDICE TEMÁTICO - * Los números referidos corresponden a la sentencia * - A • ABOGADOS"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ABOGADOS"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "322 - CONVENIO DE VIENA SOBRE RELACIONES DIPLOMÁTICAS"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CONVENIO DE VIENA SOBRE RELACIONES DIPLOMÁTICAS"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "321 - Boletín Constitucional Año 2012 - República  - DominicanaCONVENCIÓN AMERICANA SOBRE DERECHOS HUMANOS"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CONVENCIÓN AMERICANA SOBRE DERECHOS HUMANOS"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "595 - Boletín Constitucional Año 2013 - República   - Dominicana  Manifiestamente improcedente (medio de inadmisión; Ley 437-06), 205Notoriamente improcedente"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Manifiestamente improcedente (medio de inadmisión; Ley 437-06), 205 Notoriamente improcedente"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "• ADMINISTRACIÓN Deber de ofrecer pronta respuesta"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ADMINISTRACIÓN Deber de ofrecer pronta respuesta"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "596 Boletín Constitucional Año 2013Tribunal Constitucional - Secretaría  Naturaleza"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Secretaría  Naturaleza"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "342 Constitucionalidad de la Ley"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Constitucionalidad de la Ley"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "327 - Boletín Constitucional Año 2012 - República DominicanaDERECHO A LA LIBERTAD DE EXPRESIÓN"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "DERECHO A LA LIBERTAD DE EXPRESIÓN"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "348 Exigencia"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Exigencia"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "351 - Boletín Constitucional Año 2012 - República  - DominicanaTRIBUNAL CONSTITUCIONAL  Acción de amparo (incompetencia)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "TRIBUNAL CONSTITUCIONAL  Acción de amparo (incompetencia)"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(\"Boletín Constitucional Año 2013Tribunal Constitucional - \",\"\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(\"Boletín Constitucional Año 2013Tribunal Constitucional - \",\"\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(/\\d+ - Boletín Constitucional Año \\d+ - República Dominicana /,\"\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(/\\d+ - Boletín Constitucional Año \\d+ - República Dominicana /,\"\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(\"\\\\d+ - Boletín Constitucional Año \\\\d+ - República Dominicana\",\"\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(\"\\\\d+ - Boletín Constitucional Año \\\\d+ - República Dominicana\",\"\")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "315 - Boletín Constitucional Año 2012 - República  - Dominicana  Acto administrativo; 51 Jurisdicción ordinaria"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Acto administrativo; 51 Jurisdicción ordinaria"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "• ACCIÓN DIRECTA EN INCONSTITUCIONALIDAD"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "ACCIÓN DIRECTA EN INCONSTITUCIONALIDAD"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "93 Extranjeros"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Extranjeros"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "323 - Boletín Constitucional Año 2012 - República  - DominicanaD DATOS PERSONALES"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "DATOS PERSONALES"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "340   Discriminación positiva"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Discriminación positiva"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(/\\d{0,3} - Boletín Constitucional Año 2012 - República Dominicana/,\"\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(/\\d{0,3} - Boletín Constitucional Año 2012 - República Dominicana/,\"\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(\"• \",\"\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(\"• \",\"\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.trim()",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.trim()"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(/(\\d+)(\\w+)/,\"$2\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(/(\\d+)(\\w+)/,\"$2\")"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(/(\\d+)\\s(\\w+)/,\"$2\")",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(/(\\d+)\\s(\\w+)/,\"$2\")"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "8 - Secretaría  LEY 6-QUE INSTITUYE EL CÓDIGO DE PROTECCIÓN AL NIÑO, NIÑA Y ADOLESCENTE"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Secretaría  LEY 6-QUE INSTITUYE EL CÓDIGO DE PROTECCIÓN AL NIÑO, NIÑA Y ADOLESCENTE"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "1 - Boletín Constitucional Año 3 - República   - Dominicana  MEDIO AMBIENTE Derecho de carácter general o difuso"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "MEDIO AMBIENTE Derecho de carácter general o difuso"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "5 - Boletín Constitucional Año 3 - República   - Dominicana  CONSTITUCIONAL DE DECISIONES JURISDICCIONALES)"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "CONSTITUCIONAL DE DECISIONES JURISDICCIONALES"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/mass-edit",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value",
+        "edits": [
+            {
+                "from": [
+                    "7  Tratados internacionales"
+                ],
+                "fromBlank": false,
+                "fromError": false,
+                "to": "Tratados internacionales"
+            }
+        ],
+        "description": "Mass edit cells in column name"
+    },
+    {
+        "op": "core/text-transform",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "columnName": "name",
+        "expression": "value.replace(/[\\p{Zs}\\s]+/,' ')",
+        "onError": "keep-original",
+        "repeat": false,
+        "repeatCount": 10,
+        "description": "Text transform on cells in column name using expression value.replace(/[\\p{Zs}\\s]+/,' ')"
+    },
+    {
+        "op": "core/row-removal",
+        "engineConfig": {
+            "facets": [
+                {
+                    "type": "list",
+                    "name": "sentences",
+                    "expression": "isBlank(value)",
+                    "columnName": "sentences",
+                    "invert": false,
+                    "omitBlank": false,
+                    "omitError": false,
+                    "selection": [
+                        {
+                            "v": {
+                                "v": true,
+                                "l": "true"
+                            }
+                        }
+                    ],
+                    "selectBlank": false,
+                    "selectError": false
+                }
+            ],
+            "mode": "row-based"
+        },
+        "description": "Remove rows"
+    },
+    {
+        "op": "core/column-addition",
+        "engineConfig": {
+            "facets": [],
+            "mode": "row-based"
+        },
+        "baseColumnName": "sentences",
+        "expression": "grel:\"https://www.tribunalconstitucional.gob.do/consultas/secretar%C3%ADa/sentencias/\" + replace(value, \"/\", \"\")",
+        "onError": "set-to-blank",
+        "newColumnName": "sentece_link",
+        "columnInsertIndex": 6,
+        "description": "Create column sentece_link at index 6 based on column sentences using expression grel:\"https://www.tribunalconstitucional.gob.do/consultas/secretar%C3%ADa/sentencias/\" + replace(value, \"/\", \"\")"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "sentences",
+        "newColumnName": "sentence",
+        "description": "Rename column sentences to sentence"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "File",
+        "description": "Remove column File"
+    },
+    {
+        "op": "core/column-removal",
+        "columnName": "file_name",
+        "description": "Remove column file_name"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "name",
+        "newColumnName": "topic",
+        "description": "Rename column name to topic"
+    },
+    {
+        "op": "core/column-rename",
+        "oldColumnName": "sentece_link",
+        "newColumnName": "sentence_link",
+        "description": "Rename column sentece_link to sentence_link"
+    }
+]
