@@ -111,10 +111,21 @@ Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder 
 
 ![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698727366/Screenshot_2023-10-31_at_12.42.19_AM_wtxdui.png)
 
- ### Requisitos 
+ ### Requisitos
  1. Una cuenta activa en [Botpress.com](https://botpress.com/). 
  2. Documentos con los que desees entrenar al chatbot.
  3. Conexión a internet estable. 
+
+
+### Importación y configuración del Chatbot en Botpress
+Puedes descargar e importar el archivo .bpz que replicará todo el chatbot en tu cuenta de Botpress, permitiéndote acceder a toda la información y estructura de Patria de manera sencilla. Este archivo contiene todo lo necesario para que el chatbot funcione de forma óptima, incluyendo sus flujos, configuraciones y datos predefinidos.
+
+Para utilizar este archivo, sigue estos pasos básicos:
+Accede a tu cuenta de Botpress.
+Dirígete a la sección de administración e importa el archivo .bpz.
+Una vez cargado, podrás personalizar o ampliar las funcionalidades del chatbot según tus necesidades.
+
+Puedes descargar e importar el .bpz que replicara todo el chatbot en tu cuenta de botpress, para que puedas acceder a toda la información y estructura de Patria.
 
 ### ¿Cómo funciona? 
 1. **Inicio de Conversación**: Al acceder al chatbot, éste saluda al usuario y se pone a disposición para responder preguntas.
@@ -140,6 +151,7 @@ Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder 
 ### Diagrama del Flujo
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736270386/wzikee4oyz2wk5mpndaj.png)
+
 
 
 ## Habilitación de pestaña LAB con documentación de innovaciones  
