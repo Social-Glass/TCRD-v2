@@ -172,6 +172,10 @@ A continuación se muestra un extracto del código implementado.
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/skxn7hqg4z5gckmbal21.png) 
 
+**Inclusión a la base de datos de jurisprudencia y aplicación a los motores de búsqueda:** Al extraer toda la información de los boletines del Tribunal Constitucional, se transfirió hacia la base de datos de jurisprudencia, creando una categorización de tema para cada sentencia previamente publicada. Con esto, se incluyó dentro de la barra de búsqueda de sentencias un filtro para que el usuario externo pueda buscar sentencias por su debido tema. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736273087/endqzwhfocmtuemm0fhb.png)
+
 ## Habilitación de pestaña LAB con documentación de innovaciones  
 
 En un esfuerzo por mejorar la transparencia y la comunicación con los usuarios externos, hemos creado una nueva pestaña dentro de la página web del Tribunal Constitucional que refleja todos los cambios, actualizaciones y mejoras realizadas en el sitio. Esta pestaña en lab.tc.gob.do, proporciona a los usuarios una visión detallada de las modificaciones implementadas, permitiéndoles comprender cómo estos cambios impactan en su experiencia al interactuar con el portal institucional.
