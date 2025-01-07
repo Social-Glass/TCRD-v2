@@ -139,7 +139,7 @@ Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder 
 
 ### Diagrama del Flujo
 
-![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698729056/Screenshot_2023-10-31_at_1.10.30_AM_hty4po.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736270386/wzikee4oyz2wk5mpndaj.png)
 
 
 ## Habilitación de pestaña LAB con documentación de innovaciones  
