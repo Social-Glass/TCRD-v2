@@ -54,6 +54,8 @@ A continuación, se presentan los proyectos clave que se llevaron a cabo en esta
 
 Dentro de esta búsqueda avanzada, se disponen diversas barras de búsqueda, cada una con una función específica que, en conjunto, proporcionan resultados más precisos y adecuados.
 
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736308365/hibjyrbqrwb5mrww64zw.png)
+
 A continuación se describe cada una ellas: 
 
 
