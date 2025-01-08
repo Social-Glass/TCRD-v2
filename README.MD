@@ -77,6 +77,12 @@ Se añadieron los filtros de “Magistrado con voto disidente” y “Magistrado
 
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736308587/wblylrqtttqpp37g6dp5.png)
 
+**Filtro de subtemas**
+
+De manera similar al filtro de temas, hemos incluido la opción de buscar por subtemas, los cuales se han derivado de los boletines emitidos. Esto permite a los usuarios realizar búsquedas detalladas de sentencias que aborden temas específicos y sus subtemas correspondientes.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736308715/xrdfcuppujwe1ugjy58g.png)
+
 
 ## Síntesis Autónoma: Agilizando la Redacción de Sentencias mediante IA en el Tribunal Constitucional
 
