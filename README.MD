@@ -84,6 +84,113 @@ De manera similar al filtro de temas, hemos incluido la opción de buscar por su
 ![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736308715/xrdfcuppujwe1ugjy58g.png)
 
 
+## Mejoras al software y bases de datos de jurisprudencia
+
+### Integración de categorización de sentencias en el software y bases de datos de jurisprudencia
+
+Se aplicó un sistema de categorización basado en los boletines anualmente emitidos por la Secretaria General del Tribunal Constitucional de la República Dominicana. Se extrajeron las informaciones necesarias de estos boletines para la creación de etiquetas que luego fueron implementadas para categorizar cada sentencia con su debido tema y subtema.
+
+**Extracción de temas y  subtemas:** La implementación del proceso de extracción de temas y subtemas está desarrollado en Python v3.11.4 utilizando las librerías de Pandas y PyPDF2. 
+
+A continuación se muestra un extracto del código implementado. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272227/lml5eczpnqzhd7qjvr0c.png) 
+
+**Procesamiento y limpieza de datos:** La implementación del proceso de procesamiento y limpieza de datos se hace utilizando OpenRefine, aplicando un conjunto de operaciones a los resultados extraídos.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/hvj0lzol4f72mm1vrzzk.png) 
+
+**Carga de los resultados:** Desde OpenRefine es posible exportar los resultados a cargar con la estructura deseada. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/skxn7hqg4z5gckmbal21.png) 
+
+**Inclusión a la base de datos de jurisprudencia y aplicación a los motores de búsqueda:** Al extraer toda la información de los boletines del Tribunal Constitucional, se transfirió hacia la base de datos de jurisprudencia, creando una categorización de tema para cada sentencia previamente publicada. Con esto, se incluyó dentro de la barra de búsqueda de sentencias un filtro para que el usuario externo pueda buscar sentencias por su debido tema. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736273087/endqzwhfocmtuemm0fhb.png)
+
+## Primer Chatbot de la República Dominicana Impulsado por Inteligencia Artificial en materia jurisdiccional para el Tribunal Constitucional
+
+Se implementó una mejora al chatbot del Tribunal Constitucional con la capacidad de responder a preguntas relacionadas con información general del tribunal constitucional, la constitución de la República Dominicana, así como sentencias y comunicados emitidos. Esta solución busca agilizar y facilitar la obtención de información para los usuarios, al tiempo que alivia la carga de trabajo del personal de secretaría al brindar respuestas instantáneas y precisas.
+
+![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698727365/Screenshot_2023-10-31_at_12.41.59_AM_k7ywk7.png)
+
+El chatbot impulsado por inteligencia artificial es capaz de responder preguntas en lenguaje natural se apoya en complejas técnicas de procesamiento del lenguaje natural y aprendizaje automático. En primer lugar, el texto introducido por el usuario es sometido a un proceso de preprocesamiento para eliminar elementos innecesarios y dividirlo en unidades comprensibles. A continuación, el chatbot analiza la estructura gramatical y el significado semántico de las frases mediante algoritmos especializados, lo que le permite convertir el texto en representaciones numéricas llamadas vectores. Estos vectores son procesados por modelos de aprendizaje automático previamente entrenados en grandes conjuntos de datos de preguntas y respuestas, lo que le permite al chatbot aprender patrones y construir un conocimiento del lenguaje. Cuando los usuarios
+hacen preguntas, el chatbot consulta su conocimiento adquirido y generarespuestas coherentes basadas en el contexto de la pregunta.
+
+Este proceso continuo de aprendizaje y optimización del chatbot permite que mejore su capacidad para comprender y responder a las preguntas en lenguaje natural a medida que interactúa con más usuarios. En esencia, la IA en el chatbot le proporciona la capacidad de interpretar y generar respuestas relevantes y contextualmente apropiadas, lo que resulta en una interacción más eficiente y efectiva con los usuarios que buscan información o asistencia.
+
+Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder cualquier pregunta referente a los siguientes temas:
+
+ - Constitución de la república dominicana.
+ - Reglamento Jurisdiccional del Tribunal Constitucional.
+ - Informaciones generales sobre el Tribunal Constitucional.
+ - Reglamento Administrativo.
+ - Ley No. 137-11. 
+ - Ley No. 145-11.
+
+![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698727366/Screenshot_2023-10-31_at_12.42.19_AM_wtxdui.png)
+
+ ### Requisitos
+ 1. Una cuenta activa en [Botpress.com](https://botpress.com/). 
+ 2. Documentos con los que desees entrenar al chatbot.
+ 3. Conexión a internet estable. 
+
+
+### Importación y configuración del Chatbot en Botpress
+Puedes descargar e importar el archivo .bpz que replicará todo el chatbot en tu cuenta de Botpress, permitiéndote acceder a toda la información y estructura de Patria de manera sencilla. Este archivo contiene todo lo necesario para que el chatbot funcione de forma óptima, incluyendo sus flujos, configuraciones y datos predefinidos.
+
+**Para utilizar este archivo, sigue estos pasos básicos:**
+1. Accede a tu cuenta de Botpress.
+2. Dirígete a la sección de administración e importa el archivo .bpz.
+3. Una vez cargado, podrás personalizar o ampliar las funcionalidades del chatbot según tus necesidades.
+
+Puedes descargar e importar el .bpz que replicara todo el chatbot en tu cuenta de botpress, para que puedas acceder a toda la información y estructura de Patria.
+
+### ¿Cómo funciona? 
+1. **Inicio de Conversación**: Al acceder al chatbot, éste saluda al usuario y se pone a disposición para responder preguntas.
+2. **Carga de Documentos**: Los usuarios pueden cargar sus propios documentos para entrenar y personalizar las respuestas del chatbot. 
+3.  **Consulta de Documentos**: Cuando el chatbot recibe una pregunta, busca en su base de datos y documentos cargados para encontrar la respuesta más adecuada. 
+4. **Respuesta Dinámica**: Basado en los documentos y el entrenamiento recibido, el chatbot proporciona una respuesta pertinente al usuario. 
+5. **Feedback y Mejora Continua**: Después de entregar una respuesta, el chatbot solicita feedback. Este feedback es esencial para afinar y mejorar las respuestas futuras.
+6.  **Despedida**: Una vez satisfechas las dudas del usuario, el chatbot se despide cordialmente. 
+
+### ¿Por qué Botpress Studio? 
+**Botpress** es una de las plataformas líderes en el desarrollo de chatbots, y no es para menos. Diseñada con una filosofía "open-source" y centrada en la flexibilidad, Botpress se ha ganado la confianza de desarrolladores y empresas alrededor del mundo. Aquí te presentamos algunas razones y beneficios para considerar Botpress como tu plataforma principal de desarrollo de chatbots:
+1. **Open Source**: Botpress es de código abierto, lo que significa que tienes total libertad para personalizar, modificar y adaptar la plataforma a tus necesidades específicas.
+2.  **Flexibilidad**: Con Botpress, no estás limitado a un conjunto específico de funcionalidades. Su diseño modular te permite agregar, modificar o eliminar componentes según lo requieras.
+3. **Integraciones**: Botpress se integra sin problemas con las principales plataformas de mensajería como Facebook Messenger, Slack, Telegram, entre otras, facilitando la conexión con tus usuarios.
+4. **Entrenamiento Natural**: La plataforma permite el uso de procesamiento de lenguaje natural (NLP) para que tu chatbot comprenda y responda de manera más humana, ofreciendo una experiencia de usuario fluida y natural.
+5.  **Desarrollo Rápido**:Gracias a su interfaz intuitiva y herramientas de arrastrar y soltar, puedes diseñar flujos de conversación complejos sin necesidad de ser un experto en programación.
+6.  **Comunidad Activa**: Al ser una plataforma open source, Botpress cuenta con una comunidad activa y en crecimiento. Esto significa que siempre tendrás acceso a tutoriales, soluciones a problemas comunes y nuevas ideas proporcionadas por la comunidad.
+7.  **Seguridad**: Botpress permite mantener tus datos y los de tus usuarios seguros. Puedes alojar tu chatbot localmente o en tu propio servidor, garantizando que la información no caiga en manos equivocadas.
+8.  **Escalabilidad**: La plataforma está diseñada para crecer contigo. Independientemente de si estás comenzando con un pequeño chatbot o si necesitas una solución empresarial, Botpress puede manejarlo.
+9. **Multi-idioma**:Botpress soporta múltiples idiomas, lo que te permite alcanzar a una audiencia global sin barreras lingüísticas.
+10.  **Costo-Efectividad**: Al ser una solución open source, puedes iniciar sin un gran desembolso inicial. A medida que creces, los costos asociados con Botpress siguen siendo competitivos en comparación con otras soluciones en el mercado.
+
+### Diagrama del Flujo
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736270386/wzikee4oyz2wk5mpndaj.png)
+
+## Habilitación de pestaña LAB con documentación de innovaciones  
+
+En un esfuerzo por mejorar la transparencia y la comunicación con los usuarios externos, hemos creado una nueva pestaña dentro de la página web del Tribunal Constitucional que refleja todos los cambios, actualizaciones y mejoras realizadas en el sitio. Esta pestaña en lab.tc.gob.do, proporciona a los usuarios una visión detallada de las modificaciones implementadas, permitiéndoles comprender cómo estos cambios impactan en su experiencia al interactuar con el portal institucional.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/mxjagyqs4frweirb4lt5.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/t_version2/hcyl3sgt5bafjsiqpq3v.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/gde5vhqdvhq95dcltfez.png)
+
+
+Además de mostrar los cambios, también hemos agregado guías interactivas en los renglones donde se llevaron a cabo las actualizaciones. Estas guías interactivas ofrecen a los usuarios una forma más informativa y práctica de aprender a utilizar las nuevas funcionalidades y mejoras. Al hacer clic en los elementos resaltados, los usuarios recibirán instrucciones claras y ejemplos para aprovechar al máximo las nuevas actualizaciones.
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736269024/nytbfhsqpqqgowwor6w5.png)
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736269023/w1b4lfrj8rsmrsbpeadl.png)
+
+
+Es importante recalcar que esta pestaña de cambios en la página web del Tribunal Constitucional estará en constante actualización a medida que sigamos implementando nuevas mejoras y funcionalidades en el portal. Nuestro objetivo es mantener a los usuarios externos informados sobre todas las actualizaciones relevantes y ofrecerles una manera transparente de conocer cómo estas mejoras impactan su experiencia. Con cada nuevo cambio, vendrán nuevas y emocionantes maneras de interactuar con el usuario, mejorando la comunicación y el acceso a la información de una manera más efectiva y enriquecedora. 
+
+Con esta iniciativa, buscamos proporcionar una experiencia más transparente y educativa para los usuarios externos que acceden al sitio web del Tribunal Constitucional. Queremos asegurarnos de que los cambios y mejoras sean comprensibles y accesibles para todos, lo que permitirá una mayor interacción y uso efectivo de los recursos proporcionados en el portal. Esta pestaña y las guías interactivas representan nuestro compromiso continuo de brindar un servicio de calidad
+
+
 ## Síntesis Autónoma: Agilizando la Redacción de Sentencias mediante IA en el Tribunal Constitucional
 
 Se procedió a automatizar el proceso de redacción de sentencias y la creación de resúmenes automáticos, con el objetivo principal de reducir el tiempo necesario para la redacción y, por consiguiente, incrementar la capacidad de emitir un mayor número de sentencias en un periodo determinado.
@@ -150,115 +257,6 @@ Mediante esta funcionalidad, los usuarios pueden cargar y organizar datos direct
   ```
 
 Una vez que el proyecto esté corriendo, podrás acceder a él desde tu navegador preferido.
-
-
-
-## Primer Chatbot de la República Dominicana Impulsado por Inteligencia Artificial en materia jurisdiccional para el Tribunal Constitucional
-
-Se implementó una mejora al chatbot del Tribunal Constitucional con la capacidad de responder a preguntas relacionadas con información general del tribunal constitucional, la constitución de la República Dominicana, así como sentencias y comunicados emitidos. Esta solución busca agilizar y facilitar la obtención de información para los usuarios, al tiempo que alivia la carga de trabajo del personal de secretaría al brindar respuestas instantáneas y precisas.
-
-![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698727365/Screenshot_2023-10-31_at_12.41.59_AM_k7ywk7.png)
-
-El chatbot impulsado por inteligencia artificial es capaz de responder preguntas en lenguaje natural se apoya en complejas técnicas de procesamiento del lenguaje natural y aprendizaje automático. En primer lugar, el texto introducido por el usuario es sometido a un proceso de preprocesamiento para eliminar elementos innecesarios y dividirlo en unidades comprensibles. A continuación, el chatbot analiza la estructura gramatical y el significado semántico de las frases mediante algoritmos especializados, lo que le permite convertir el texto en representaciones numéricas llamadas vectores. Estos vectores son procesados por modelos de aprendizaje automático previamente entrenados en grandes conjuntos de datos de preguntas y respuestas, lo que le permite al chatbot aprender patrones y construir un conocimiento del lenguaje. Cuando los usuarios
-hacen preguntas, el chatbot consulta su conocimiento adquirido y generarespuestas coherentes basadas en el contexto de la pregunta.
-
-Este proceso continuo de aprendizaje y optimización del chatbot permite que mejore su capacidad para comprender y responder a las preguntas en lenguaje natural a medida que interactúa con más usuarios. En esencia, la IA en el chatbot le proporciona la capacidad de interpretar y generar respuestas relevantes y contextualmente apropiadas, lo que resulta en una interacción más eficiente y efectiva con los usuarios que buscan información o asistencia.
-
-Luego de realizar un proceso de entrenamiento, El chatbot es capaz de responder cualquier pregunta referente a los siguientes temas:
-
- - Constitución de la república dominicana.
- - Reglamento Jurisdiccional del Tribunal Constitucional.
- - Informaciones generales sobre el Tribunal Constitucional.
- - Reglamento Administrativo.
- - Ley No. 137-11. 
- - Ley No. 145-11.
-
-![enter image description here](https://res.cloudinary.com/djgjgies2/image/upload/v1698727366/Screenshot_2023-10-31_at_12.42.19_AM_wtxdui.png)
-
- ### Requisitos
- 1. Una cuenta activa en [Botpress.com](https://botpress.com/). 
- 2. Documentos con los que desees entrenar al chatbot.
- 3. Conexión a internet estable. 
-
-
-### Importación y configuración del Chatbot en Botpress
-Puedes descargar e importar el archivo .bpz que replicará todo el chatbot en tu cuenta de Botpress, permitiéndote acceder a toda la información y estructura de Patria de manera sencilla. Este archivo contiene todo lo necesario para que el chatbot funcione de forma óptima, incluyendo sus flujos, configuraciones y datos predefinidos.
-
-**Para utilizar este archivo, sigue estos pasos básicos:**
-1. Accede a tu cuenta de Botpress.
-2. Dirígete a la sección de administración e importa el archivo .bpz.
-3. Una vez cargado, podrás personalizar o ampliar las funcionalidades del chatbot según tus necesidades.
-
-Puedes descargar e importar el .bpz que replicara todo el chatbot en tu cuenta de botpress, para que puedas acceder a toda la información y estructura de Patria.
-
-### ¿Cómo funciona? 
-1. **Inicio de Conversación**: Al acceder al chatbot, éste saluda al usuario y se pone a disposición para responder preguntas.
-2. **Carga de Documentos**: Los usuarios pueden cargar sus propios documentos para entrenar y personalizar las respuestas del chatbot. 
-3.  **Consulta de Documentos**: Cuando el chatbot recibe una pregunta, busca en su base de datos y documentos cargados para encontrar la respuesta más adecuada. 
-4. **Respuesta Dinámica**: Basado en los documentos y el entrenamiento recibido, el chatbot proporciona una respuesta pertinente al usuario. 
-5. **Feedback y Mejora Continua**: Después de entregar una respuesta, el chatbot solicita feedback. Este feedback es esencial para afinar y mejorar las respuestas futuras.
-6.  **Despedida**: Una vez satisfechas las dudas del usuario, el chatbot se despide cordialmente. 
-
-### ¿Por qué Botpress Studio? 
-**Botpress** es una de las plataformas líderes en el desarrollo de chatbots, y no es para menos. Diseñada con una filosofía "open-source" y centrada en la flexibilidad, Botpress se ha ganado la confianza de desarrolladores y empresas alrededor del mundo. Aquí te presentamos algunas razones y beneficios para considerar Botpress como tu plataforma principal de desarrollo de chatbots:
-1. **Open Source**: Botpress es de código abierto, lo que significa que tienes total libertad para personalizar, modificar y adaptar la plataforma a tus necesidades específicas.
-2.  **Flexibilidad**: Con Botpress, no estás limitado a un conjunto específico de funcionalidades. Su diseño modular te permite agregar, modificar o eliminar componentes según lo requieras.
-3. **Integraciones**: Botpress se integra sin problemas con las principales plataformas de mensajería como Facebook Messenger, Slack, Telegram, entre otras, facilitando la conexión con tus usuarios.
-4. **Entrenamiento Natural**: La plataforma permite el uso de procesamiento de lenguaje natural (NLP) para que tu chatbot comprenda y responda de manera más humana, ofreciendo una experiencia de usuario fluida y natural.
-5.  **Desarrollo Rápido**:Gracias a su interfaz intuitiva y herramientas de arrastrar y soltar, puedes diseñar flujos de conversación complejos sin necesidad de ser un experto en programación.
-6.  **Comunidad Activa**: Al ser una plataforma open source, Botpress cuenta con una comunidad activa y en crecimiento. Esto significa que siempre tendrás acceso a tutoriales, soluciones a problemas comunes y nuevas ideas proporcionadas por la comunidad.
-7.  **Seguridad**: Botpress permite mantener tus datos y los de tus usuarios seguros. Puedes alojar tu chatbot localmente o en tu propio servidor, garantizando que la información no caiga en manos equivocadas.
-8.  **Escalabilidad**: La plataforma está diseñada para crecer contigo. Independientemente de si estás comenzando con un pequeño chatbot o si necesitas una solución empresarial, Botpress puede manejarlo.
-9. **Multi-idioma**:Botpress soporta múltiples idiomas, lo que te permite alcanzar a una audiencia global sin barreras lingüísticas.
-10.  **Costo-Efectividad**: Al ser una solución open source, puedes iniciar sin un gran desembolso inicial. A medida que creces, los costos asociados con Botpress siguen siendo competitivos en comparación con otras soluciones en el mercado.
-
-### Diagrama del Flujo
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736270386/wzikee4oyz2wk5mpndaj.png)
-
-## Mejoras al software y bases de datos de jurisprudencia
-
-### Integración de categorización de sentencias en el software y bases de datos de jurisprudencia
-
-Se aplicó un sistema de categorización basado en los boletines anualmente emitidos por la Secretaria General del Tribunal Constitucional de la República Dominicana. Se extrajeron las informaciones necesarias de estos boletines para la creación de etiquetas que luego fueron implementadas para categorizar cada sentencia con su debido tema y subtema.
-
-**Extracción de temas y  subtemas:** La implementación del proceso de extracción de temas y subtemas está desarrollado en Python v3.11.4 utilizando las librerías de Pandas y PyPDF2. 
-
-A continuación se muestra un extracto del código implementado. 
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272227/lml5eczpnqzhd7qjvr0c.png) 
-
-**Procesamiento y limpieza de datos:** La implementación del proceso de procesamiento y limpieza de datos se hace utilizando OpenRefine, aplicando un conjunto de operaciones a los resultados extraídos.
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/hvj0lzol4f72mm1vrzzk.png) 
-
-**Carga de los resultados:** Desde OpenRefine es posible exportar los resultados a cargar con la estructura deseada. 
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736272481/skxn7hqg4z5gckmbal21.png) 
-
-**Inclusión a la base de datos de jurisprudencia y aplicación a los motores de búsqueda:** Al extraer toda la información de los boletines del Tribunal Constitucional, se transfirió hacia la base de datos de jurisprudencia, creando una categorización de tema para cada sentencia previamente publicada. Con esto, se incluyó dentro de la barra de búsqueda de sentencias un filtro para que el usuario externo pueda buscar sentencias por su debido tema. 
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736273087/endqzwhfocmtuemm0fhb.png)
-
-## Habilitación de pestaña LAB con documentación de innovaciones  
-
-En un esfuerzo por mejorar la transparencia y la comunicación con los usuarios externos, hemos creado una nueva pestaña dentro de la página web del Tribunal Constitucional que refleja todos los cambios, actualizaciones y mejoras realizadas en el sitio. Esta pestaña en lab.tc.gob.do, proporciona a los usuarios una visión detallada de las modificaciones implementadas, permitiéndoles comprender cómo estos cambios impactan en su experiencia al interactuar con el portal institucional.
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/mxjagyqs4frweirb4lt5.png)
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/t_version2/hcyl3sgt5bafjsiqpq3v.png)
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736268878/gde5vhqdvhq95dcltfez.png)
-
-
-Además de mostrar los cambios, también hemos agregado guías interactivas en los renglones donde se llevaron a cabo las actualizaciones. Estas guías interactivas ofrecen a los usuarios una forma más informativa y práctica de aprender a utilizar las nuevas funcionalidades y mejoras. Al hacer clic en los elementos resaltados, los usuarios recibirán instrucciones claras y ejemplos para aprovechar al máximo las nuevas actualizaciones.
-
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736269024/nytbfhsqpqqgowwor6w5.png)
-![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736269023/w1b4lfrj8rsmrsbpeadl.png)
-
-
-Es importante recalcar que esta pestaña de cambios en la página web del Tribunal Constitucional estará en constante actualización a medida que sigamos implementando nuevas mejoras y funcionalidades en el portal. Nuestro objetivo es mantener a los usuarios externos informados sobre todas las actualizaciones relevantes y ofrecerles una manera transparente de conocer cómo estas mejoras impactan su experiencia. Con cada nuevo cambio, vendrán nuevas y emocionantes maneras de interactuar con el usuario, mejorando la comunicación y el acceso a la información de una manera más efectiva y enriquecedora. 
-
-Con esta iniciativa, buscamos proporcionar una experiencia más transparente y educativa para los usuarios externos que acceden al sitio web del Tribunal Constitucional. Queremos asegurarnos de que los cambios y mejoras sean comprensibles y accesibles para todos, lo que permitirá una mayor interacción y uso efectivo de los recursos proporcionados en el portal. Esta pestaña y las guías interactivas representan nuestro compromiso continuo de brindar un servicio de calidad
-
 
 
 
