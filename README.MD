@@ -50,9 +50,12 @@ A continuación, se presentan los proyectos clave que se llevaron a cabo en esta
 
 **Búsqueda Avanzada:** Se añadió un renglón de búsqueda avanzada, para poder proveer al usuario la oportunidad de combinar una serie de filtros para optimizar su búsqueda. 
 
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736287642/k4olblm2m5m0p6df7mur.png)
+
 Dentro de esta búsqueda avanzada, se disponen diversas barras de búsqueda, cada una con una función específica que, en conjunto, proporcionan resultados más precisos y adecuados.
 
 A continuación se describe cada una ellas: 
+
 
 **Todas estas palabras:** Al utilizar este operador, puedes incluir varias palabras clave separadas por espacios. El motor de búsqueda mostrará resultados que contengan todas las palabras clave especificadas en la misma sentencia. Por ejemplo, si buscas "Legitimación activa", obtendrás resultados que contengan tanto "Legitimación" como "activa". 
 
