@@ -69,6 +69,15 @@ A continuación se describe cada una ellas:
 
 **Fundamentos del tribunal:** Esta búsqueda permite al usuario buscar en una sentencia después de la sección de consideraciones y fundamentos. Excluyendo la parte inicial de la sentencia. 
 
+Por otro lado, tambien se añadieron nuevos filtros: 
+
+**Filtro de votos particulares de los magistrados**
+
+Se añadieron los filtros de “Magistrado con voto disidente” y “Magistrado con voto salvado” para poder filtrar sentencias por magistrado y el tipo de voto. El usuario podrá seleccionar buscar sentencias en las cuales figure un voto disidente o salvado de un magistrado en específico. 
+
+![enter image description here](https://res.cloudinary.com/dn2gw6mfr/image/upload/v1736308587/wblylrqtttqpp37g6dp5.png)
+
+
 ## Síntesis Autónoma: Agilizando la Redacción de Sentencias mediante IA en el Tribunal Constitucional
 
 Se procedió a automatizar el proceso de redacción de sentencias y la creación de resúmenes automáticos, con el objetivo principal de reducir el tiempo necesario para la redacción y, por consiguiente, incrementar la capacidad de emitir un mayor número de sentencias en un periodo determinado.
